@@ -1,0 +1,22 @@
+
+<div class="contenedor">
+  <div class="titulo">
+    <h1 class="title">Sistema de Banca Electrónica Centaya <img class="logo" src="./assets/img/Logo-SBEC.png" alt="" ></h1>
+  </div>
+    
+  <div class="cuerpo">
+    <img class="center" src="./assets/img/banking.svg" alt="">
+    <h2 class="log">Login</h2>
+    <p>¿Aún no tienes cuenta?<a routerLink="/auth/register">Registrarse</a></p> <br>
+  </div>
+
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <input type="text" placeholder="User" required formControlName="user"> <br> <br>
+    <input type="password" placeholder="Password" required formControlName="pass"> <br> <br>
+    <!-- <input class="entrar" routerLink="/dashboardClient" value="Entrar"> -->
+    <button type="submit" >Entrar</button>
+  </form>
+
+  <img class="pie" src="./assets/img/fondo.svg" alt="">
+
+</div>

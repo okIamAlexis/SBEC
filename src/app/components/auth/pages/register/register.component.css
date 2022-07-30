@@ -1,0 +1,90 @@
+
+.container{
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    /* height: 108px; */
+    
+}
+
+
+.instrucciones{
+    width: 100%;
+    display: inline-flex;
+    height: 100%;
+    margin: 0;
+    background-color: black;
+}
+
+.card-header, .card-footer{
+    background-color: #44a542dc;
+}
+.card-body{
+    background-color: #FFFFFF;
+}
+
+
+.part-img{
+    /* width: 573px; */
+    /* height: 408px; */
+    /* left: 178px;
+    top: 258px; */
+    background-color: rgba(58, 158, 62, 0.6);
+    /* border-radius: 45px; */
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.form{
+    
+    padding: 0;
+}
+
+.part-img > h3 {
+    width: 226px;
+    height: 66px;
+    color: #FFFFFF;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 52px;
+    line-height: 97px;
+    text-align: center;
+}
+
+.part-img > img{
+    width: 80vw;
+    height: 204px;
+}
+
+
+.card{
+    
+    justify-items: center;
+    align-items: center;
+    /* height: 408px; */
+
+    /* background: blue; */
+    /* border-radius: 36px; */
+    line-height: 27px;
+}
+
+
+
+.form-label{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    /* font-size: 12px;
+    line-height: 15px;
+
+    color: #000000; */
+}
+
+.btn-rg{
+    display: flex; align-items: center; justify-content: center; width: 100%;
+}

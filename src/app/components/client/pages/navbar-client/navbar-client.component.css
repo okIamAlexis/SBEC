@@ -1,0 +1,22 @@
+.display{
+    width: 100%;
+    display: inline-flex;
+    height: 100%;
+}
+
+.content-left{
+    width: 15%;
+    
+}
+
+.content-dashboard{
+    width: 85%;
+}
+
+h1{
+    font-weight: bold;
+}
+
+.nav-link{
+    height: 100px;
+}
