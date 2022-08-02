@@ -6,6 +6,7 @@
     
   <div class="cuerpo">
     <img class="center" src="./assets/img/banking.svg" alt="">
+    <p>Hola</p>
     <h2 class="log">Login</h2>
     <p>¿Aún no tienes cuenta?<a routerLink="/auth/register">Registrarse</a></p> <br>
   </div>
@@ -13,7 +14,7 @@
   <form [formGroup]="loginForm" (ngSubmit)="login()">
     <input type="text" placeholder="User" required formControlName="user"> <br> <br>
     <input type="password" placeholder="Password" required formControlName="pass"> <br> <br>
-    <!-- <input class="entrar" routerLink="/dashboardClient" value="Entrar"> -->
+    <!-- <input class="entrar" type="button" (click)="links(loginForm)" value="Entrar"> -->
     <button type="submit" >Entrar</button>
   </form>
 

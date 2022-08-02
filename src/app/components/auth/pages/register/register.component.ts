@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { newUser, checkClient } from '../../../../models/newUser';
 
 @Component({
   selector: 'app-register',
@@ -10,9 +12,11 @@ export class RegisterComponent implements OnInit {
 
   formOne: FormGroup;
   formTwo: FormGroup;
-  step: any = 2;
+  step: any = 1;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder,
+              private modelService: NgbModal,
+              private nuevoUsuario: newUser) {
     
     this.formOne = this.fb.group({
 
@@ -34,10 +38,16 @@ export class RegisterComponent implements OnInit {
 
    }
 
+   enviar(){
+    // this.modelService.open(modal);
+    this.step = 2;
+   }
+   enviar2(modal: any){
+    this.modelService.open(modal);
+    // this.step = 2;
+   }
+
   ngOnInit(): void {
-
-    
-
 
   }
 
@@ -49,8 +59,21 @@ export class RegisterComponent implements OnInit {
     return pass === confirmPass ? null : { notSame: true};
    }
 
-  nextPaso(): void{
-    this.step == 2;
+  pasoUno(): void{
+    const data: checkClient = {
+      curp: this.formOne.value.curp,
+      idCuenta: this.formOne.value.noCliente
+    }
+    console.log(data); 
+
+
   }
+
+  pasoDos(): void{
+    const data: newUser = {
+      
+    }
+  }
+
 
 }

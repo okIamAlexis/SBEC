@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { UserClient } from '../models/usuario';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -7,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginService {
 
-  private URL = 'http://localhost:3000';
+  private URL = 'http://localhost:35231/user';
 
   userEjecutivo: string =  '';
   userAdministrador: string = '';
@@ -15,7 +17,7 @@ export class LoginService {
 
   constructor(private http: HttpClient) { }
 
-  signin(user:any){
+  signin(user:UserClient): Observable<any>{
     return this.http.post(`${this.URL}/user/singin`, user);
   }
 

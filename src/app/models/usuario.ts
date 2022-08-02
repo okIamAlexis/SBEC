@@ -3,6 +3,6 @@ export class UserInf{
 }
 
 export class UserClient{
-    usario?: string;
+    usuario?: string;
     contrasenia?: string;
 }

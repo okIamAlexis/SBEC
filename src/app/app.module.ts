@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 //Component
 import { AppComponent } from './app.component';
+import { NgbModule, ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,9 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

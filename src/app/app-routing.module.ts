@@ -7,11 +7,11 @@ const routes: Routes = [
 
   {path: 'auth',loadChildren: () => import('./components/auth/auth.module').then(m => m.AuthModule)},
 
-  {path: 'dashboardMg', loadChildren: () => import('./components/manager/manager.module').then( module => module.ManagerModule), canActivate:[AuthGuard]},
+  {path: 'dashboardMg', loadChildren: () => import('./components/manager/manager.module').then( module => module.ManagerModule)},
 
-  {path: 'dashboardClient', loadChildren: () => import('./components/client/client.module').then( module => module.ClientModule), canActivate:[AuthGuard]},
+  {path: 'dashboardClient', loadChildren: () => import('./components/client/client.module').then( module => module.ClientModule)},
 
-  {path: 'dashboardAdm', loadChildren: () => import('./components/admin/admin.module').then( module => module.AdminModule), canActivate:[AuthGuard]},
+  {path: 'dashboardAdm', loadChildren: () => import('./components/admin/admin.module').then( module => module.AdminModule)},
 
   {path: '**', redirectTo: 'auth'},
 ];

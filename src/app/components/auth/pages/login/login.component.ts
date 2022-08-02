@@ -52,7 +52,7 @@ export class LoginComponent implements OnInit {
 
   login():void {
     const data: UserClient = {
-      usario: this.loginForm.value.user,
+      usuario: this.loginForm.value.user,
       contrasenia: this.loginForm.value.pass
     }
     console.log(data);
